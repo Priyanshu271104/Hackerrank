@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+{
+    int n=0;
+    scanf("%d",&n);
+    int a[n][n];
+int r,c,i,p=0,s=0;
+
+for(r=0;r<n;r++)
+{for(c=0;c<n;c++)
+scanf("%d",&a[r][c]);
+}
+for(r=0;r<n;r++)
+{for(c=0;c<n;c++)
+{if (r==c) {
+p=(p+a[r][c]);
+}}}
+for(r=0;r<n;r++)
+{for(c=0;c<n;c++)
+{if (r+c==(n-1)) {
+s=(s+a[r][c]);
+}}}
+i=p-s;
+printf("%d",abs(i));
+return 0;
+}
+}
