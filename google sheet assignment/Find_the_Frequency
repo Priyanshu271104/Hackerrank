@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int s=0,i;
+    for(i=0;i<v.size();i++)
+    {
+        if(v[i]==x)
+        {
+            s=s+1;
+        }
+    }
+    return s;
