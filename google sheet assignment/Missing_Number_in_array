@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Solution{
+  public:
+    int missingNumber(vector<int>& array, int n) {
+       int i,arrsum=0,sum=0;
+       for(int j=1;j<=n;j++){
+           sum+=j;}
+       for(i=0;i<n-1;i++){
+           arrsum+=array[i];
+       }
+       return (sum-arrsum);
+    }
+};
