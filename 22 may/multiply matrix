@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){  
+    int r,c,i,j,k;        
+    cin>>r>>c;
+    int a[r][c],b[r][c],mul[r][c];
+    for(i=0;i<r;i++){    
+        for(j=0;j<c;j++){
+            cin>>a[i][j];  
+        }
+}
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            cin>>b[i][j];
+        }    
+} 
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            int sum=0;
+            for(k=0;k<c;k++){
+                sum+=a[i][k]*b[k][j];    
+            }
+            mul[i][j]=sum;
+        }    
+}    
+   for(i=0;i<r;i++){    
+       for(j=0;j<c;j++){    
+           cout<<mul[i][j]<<" ";    
+       }    
+       cout<<"\n";    
+   }    
+return 0;  
+}    
