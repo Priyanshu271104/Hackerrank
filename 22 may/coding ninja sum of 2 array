@@ -1,0 +1,30 @@
+#include <bits/stdc++.h> 
+vector<int> findArraySum(vector<int>a, int n, vector<int>b, int m) {
+    
+	vector<int>answer;
+	int carry = 0,s= 0;
+	int i = n - 1,j = m - 1;
+    
+	while (i >= 0 || j >= 0) {
+		s = 0;
+		if (i >= 0) {
+			s+= a[i];
+			i--;
+		}
+		if (j >= 0) {
+			s+= b[j];
+			j--;
+		}
+        
+		s+= carry;
+		int lastDigit = s% 10;
+		carry = s/ 10;
+		answer.push_back(lastDigit);
+	}
+	if (carry) {
+		answer.push_back(carry);
+	}
+    
+	reverse(answer.begin(), answer.end());
+	return answer;
+}
